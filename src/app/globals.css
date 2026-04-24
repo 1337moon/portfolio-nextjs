@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    /* Google Fonts */
+    --font-primary: "Oswald", sans-serif;
+    --font-secondary: "Nunito Sans", sans-serif;
+
+    /* Color Palette */
+    --color-primary: #79E2F0;
+    --color-secondary: #9FB3B5;
+    --color-dark: #07171B;
+
+    /* Font Size */
+    --text-120: 7.5rem;
+    --text-22: 1.375rem;
+
+    /* Container Width */
+    --container-max-width: 1664px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    html {
+        @apply scroll-smooth text-sm xl:text-base;
+    }
+
+    body {
+        @apply bg-dark;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply font-normal transition-all duration-600;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply capitalize;
+    }
+
+    h1 {
+        @apply text-5xl md:text-6xl xl:text-8xl 2xl:text-120 -tracking-[0.125rem] lg:-tracking-[0.1875rem] 2xl:-tracking-[0.25rem];
+    }
+
+    h2 {
+        @apply text-4xl lg:text-5xl xl:text-6xl leading-[1.1];
+    }
+
+    h3 {
+        @apply text-3xl leading-[1.1];
+    }
+
+    h4 {
+        @apply text-xl lg:text-2xl leading-[1.1];
+    }
+
+    p {
+        @apply text-secondary text-lg lg:text-xl font-normal font-secondary leading-[1.5];
+    }
+
+    ::selection {
+        @apply bg-primary text-white;
+    }
+
+    section {
+        @apply overflow-hidden py-10 md:py-12 lg:py-16 2xl:py-30;
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+    .container {
+        @apply !max-w-[var(--container-max-width)] mx-auto px-6;
+    }
+}
+
+/* @layer utilities {
+    
+} */
+
+
+/* Custom CSS */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(121, 226, 240, 0.2);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(121, 226, 240, 0.4);
 }
