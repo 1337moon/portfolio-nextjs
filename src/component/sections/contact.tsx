@@ -1,6 +1,5 @@
 "use client";
 
-import data from "../../jsons/portfolio.json";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function Contact() {
@@ -10,11 +9,11 @@ export default function Contact() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-white mb-6">
-                            {data.contact.heading}
+                            Get In Touch
                             <span className="text-primary">.</span>
                         </h2>
                         <p className="text-secondary/80 text-lg mb-12 max-w-lg">
-                            {data.contact.description}
+                            I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                         </p>
 
                         <div className="flex flex-col gap-8">
@@ -24,8 +23,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <span className="block text-sm text-secondary/60 font-primary uppercase tracking-widest mb-1">Email</span>
-                                    <a href={`mailto:${data.contact.email}`} className="text-white text-xl hover:text-primary transition-colors">
-                                        {data.contact.email}
+                                    <a href={`mailto:hello@muhammadmoon.com`} className="text-white text-xl hover:text-primary transition-colors">
+                                        hello@muhammadmoon.com
                                     </a>
                                 </div>
                             </div>
@@ -36,8 +35,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <span className="block text-sm text-secondary/60 font-primary uppercase tracking-widest mb-1">Phone</span>
-                                    <a href={`tel:${data.contact.phone.replace(/[^0-9]/g, '')}`} className="text-white text-xl hover:text-primary transition-colors">
-                                        {data.contact.phone}
+                                    <a href={`tel:+15551234567`} className="text-white text-xl hover:text-primary transition-colors">
+                                        +1 (555) 123-4567
                                     </a>
                                 </div>
                             </div>
@@ -49,7 +48,7 @@ export default function Contact() {
                                 <div>
                                     <span className="block text-sm text-secondary/60 font-primary uppercase tracking-widest mb-1">Location</span>
                                     <span className="text-white text-xl">
-                                        {data.contact.location}
+                                        San Francisco, CA
                                     </span>
                                 </div>
                             </div>

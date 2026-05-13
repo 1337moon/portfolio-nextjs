@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Oswald, Nunito_Sans } from "next/font/google";
-import "./globals.css";const oswald = Oswald({
-    variable: "--font-oswald",
+import { Playfair_Display, Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+    variable: "--font-inter",
     subsets: ["latin"],
 });
 
-const nunitoSans = Nunito_Sans({
-    variable: "--font-nunito-sans",
+const playfairDisplay = Playfair_Display({
+    variable: "--font-playfair-display",
     subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
     robots: "noindex, nofollow",
-    title: "Jane Doe | Frontend Developer",
-    description: "Portfolio of Jane Doe, a passionate frontend developer and designer.",
+    title: "Muhammad Moon | Frontend Developer",
+    description: "Portfolio of Muhammad Moon, a passionate frontend developer and designer.",
 
     openGraph: {
-        title: "Jane Doe | Frontend Developer",
-        description: "Portfolio of Jane Doe, a passionate frontend developer and designer.",
+        title: "Muhammad Moon | Frontend Developer",
+        description: "Portfolio of Muhammad Moon, a passionate frontend developer and designer.",
         url: "#",
         images: [
             {
@@ -35,7 +37,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <body
-                className={`${oswald.variable} ${nunitoSans.variable} antialiased`}
+                className={`${inter.variable} ${playfairDisplay.variable} antialiased`}
                 suppressHydrationWarning={true}
             >
                 {children}

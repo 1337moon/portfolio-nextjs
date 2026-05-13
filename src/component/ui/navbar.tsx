@@ -7,7 +7,7 @@ export default function Navbar() {
             <div className="container flex items-center justify-between h-20">
                 <Link href="#" className="flex items-center gap-2 text-white group">
                     <Code2 className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
-                    <span className="text-2xl font-primary font-bold tracking-wider">JANE<span className="text-primary">.</span></span>
+                    <span className="text-2xl font-primary font-bold tracking-wider">MOON<span className="text-primary">.</span></span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8 text-secondary font-primary text-lg tracking-wide uppercase">

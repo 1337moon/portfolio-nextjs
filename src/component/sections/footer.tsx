@@ -25,7 +25,7 @@ export default function Footer() {
 
                 <div className="w-full flex w-full flex-col md:flex-row justify-between items-center border-t border-white/10 pt-10 mt-10 gap-6">
                     <p className="text-secondary/60 text-sm font-primary tracking-widest uppercase">
-                        © {new Date().getFullYear()} JANE DOE. All Rights Reserved.
+                        © {new Date().getFullYear()} MUHAMMAD MOON. All Rights Reserved.
                     </p>
 
                     <Link href="#hero" className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 text-secondary hover:text-primary transition-all duration-300 group">

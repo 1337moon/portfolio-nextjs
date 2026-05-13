@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import data from "../../jsons/portfolio.json";
 
 export default function Projects() {
     return (
@@ -9,7 +8,7 @@ export default function Projects() {
             <div className="container">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-24 gap-6">
                     <h2 className="text-white m-0 max-w-xl">
-                        {data.projects.heading}
+                        Featured Projects
                         <span className="text-primary">.</span>
                     </h2>
                     <Link href="#" className="hidden md:flex text-primary font-primary uppercase tracking-wider text-base items-center gap-2 hover:text-white transition-colors">
@@ -18,7 +17,24 @@ export default function Projects() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                    {data.projects.list.map((project) => (
+                    {[
+                        {
+                            "id": 1,
+                            "title": "CryptoDash Analytics",
+                            "description": "A comprehensive dashboard for tracking cryptocurrency markets in real-time, featuring advanced data visualization and live price updates.",
+                            "image": "/images/project1.png",
+                            "tags": ["Next.js", "Tailwind CSS", "Recharts", "WebSockets"],
+                            "link": "#"
+                        },
+                        {
+                            "id": 2,
+                            "title": "Aura eCommerce",
+                            "description": "A sleek, modern e-commerce mobile web application. Features a full shopping cart experience, headless CMS integration, and seamless checkout flow.",
+                            "image": "/images/project2.png",
+                            "tags": ["React", "TypeScript", "Framer Motion", "Stripe"],
+                            "link": "#"
+                        }
+                    ].map((project) => (
                         <div key={project.id} className="group relative block overflow-hidden bg-dark border border-white/10 hover:border-primary/50 transition-colors duration-500">
                             {/* Image Container */}
                             <div className="relative w-full aspect-[4/3] overflow-hidden bg-white/5">

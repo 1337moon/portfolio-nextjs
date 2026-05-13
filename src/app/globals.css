@@ -3,8 +3,8 @@
 
 @theme inline {
     /* Google Fonts */
-    --font-primary: "Oswald", sans-serif;
-    --font-secondary: "Nunito Sans", sans-serif;
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Playfair Display", serif;
 
     /* Color Palette */
     --color-primary: #79E2F0;
@@ -94,6 +94,7 @@
     background: rgba(121, 226, 240, 0.2);
     border-radius: 10px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgba(121, 226, 240, 0.4);
 }
