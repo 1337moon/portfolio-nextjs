@@ -33,6 +33,22 @@ export default function Projects() {
                             "image": "/images/project2.png",
                             "tags": ["React", "TypeScript", "Framer Motion", "Stripe"],
                             "link": "#"
+                        },
+                        {
+                            "id": 3,
+                            "title": "Quantum AI Dashboard",
+                            "description": "An AI-powered analytics dashboard for predictive modeling and data visualization. Built with Next.js and Tailwind CSS.",
+                            "image": "/images/hero.png",
+                            "tags": ["Next.js", "Tailwind CSS", "OpenAI"],
+                            "link": "#"
+                        },
+                        {
+                            "id": 4,
+                            "title": "Stellar Portfolio",
+                            "description": "A stunning, responsive portfolio template with smooth animations and modern dark-mode aesthetics.",
+                            "image": "/images/portfolio-hero-bg.jpg",
+                            "tags": ["React", "Framer Motion", "Tailwind CSS"],
+                            "link": "#"
                         }
                     ].map((project) => (
                         <div key={project.id} className="group relative block overflow-hidden bg-dark border border-white/10 hover:border-primary/50 transition-colors duration-500">
